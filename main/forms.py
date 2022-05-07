@@ -7,6 +7,7 @@ class RegisterUserForm(UserCreationForm):
         model = User
         fields = ['username', 'password1', 'password2']
 
+    # Styling Registration form fields with bootstrap
     def __init__(self, *args, **kwargs):
         super(RegisterUserForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update(

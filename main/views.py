@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-
 from main.forms import RegisterUserForm
 # Create your views here.
 
@@ -29,11 +27,13 @@ def loginUser(request):
     return render(request, 'main/login_register.html', {'page': page})
 
 
+# Logout - simply logs out user)
 def logoutUSer(request):
     logout(request)
     return redirect('login')
 
 
+# Checks if user is not registered saving user to our Database
 def registerUser(request):
     page = 'register'
     form = RegisterUserForm()
