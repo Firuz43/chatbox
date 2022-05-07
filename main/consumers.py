@@ -4,6 +4,7 @@ from asgiref.sync import async_to_sync
 
 
 class ChatConsumer(WebsocketConsumer):
+
     def connect(self):
         self.room_group_name = 'test'
 
