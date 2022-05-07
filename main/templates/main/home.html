@@ -7,6 +7,10 @@
         <p>Hello {{request.user}} Let's Chat!</p>
     {% endif %}
 
+    <form action="">
+        <input type="text" name="message" id="form"/>
+    </form>
+    <div id="messages"></div>
 <a href="logout/">logout</a>
 
 <!-- Websocket connection -->
@@ -17,6 +21,26 @@
     chatSocket.onmessage = function(e){
         let data = JSON.parse(e.data)
         console.log('DATA:', data)
+
+        //handling incoming messages from server
+        if(data.type == 'chat'){
+            let messages = document.getElementById('messages')
+
+            messages.insertAdjacentHTML('beforeend', `<div>
+                    <p>${data.message}</p>
+                    </div>`)
+        }
     }
+
+    let form = document.getElementById('form')
+    form.addEventListener('submit', (e)=> {
+        e.preventDefault()
+        let message = e.target.message.value
+        chatSocket.send(JSON.stringify({
+            'message':message
+        }))
+        form.reset()
+    })
+
 </script>
 {% endblock %}
