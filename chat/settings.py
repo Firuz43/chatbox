@@ -47,6 +47,13 @@ INSTALLED_APPS = [
 # Making connection with ASGI
 ASGI_APPLICATION = 'chat.asgi.application'
 
+# Testing channel layers inmemory
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
