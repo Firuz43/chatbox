@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'main.apps.MainConfig',
 ]
 
@@ -87,6 +88,7 @@ DATABASES = {
     }
 }
 '''
+# Making Connection with MongDB database
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
