@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .forms import CustomUserCreationForm
+
+from main.forms import RegisterUserForm
 # Create your views here.
 
 
@@ -35,6 +36,6 @@ def logoutUSer(request):
 
 def registerUser(request):
     page = 'register'
-    form = UserCreationForm()
+    form = RegisterUserForm()
     context = {"form": form}
     return render(request, 'main/login_register.html', context)

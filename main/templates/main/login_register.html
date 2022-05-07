@@ -33,10 +33,15 @@
             <p>Don't have an account <a href="{% url 'register' %}">Register</a></p>
         </form>
         {% else %}
-            <form action="post">
+            <form action="post" class="form">
                 <h1>Register</h1>
                 {% csrf_token %}
-                {{form}}
+                {% for field in form %}
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                    </div>
+                {% endfor %}
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <p>Already have an account <a href="{% url 'login' %}">login</a></p>
             </form>
