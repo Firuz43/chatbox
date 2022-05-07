@@ -16,3 +16,4 @@ write functionality to save messages to database due to time restriction. I was 
 ### Links that i have used
 </br>
 https://docs.djangoproject.com/en/4.0/
+https://channels.readthedocs.io/en/latest/tutorial/index.html
