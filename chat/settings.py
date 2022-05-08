@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from telnetlib import LOGOUT
 
@@ -151,3 +152,7 @@ LOGIN_REDIRECT_URL = '/'
 
 # After logging out
 LOGOUT_REDIRECT_URL = '/login'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
