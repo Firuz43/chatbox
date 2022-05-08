@@ -1,0 +1,10 @@
+/* Centering Login form */
+.login--wrapper {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  width: 550px;
+}
