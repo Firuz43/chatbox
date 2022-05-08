@@ -153,6 +153,7 @@ LOGIN_REDIRECT_URL = '/'
 # After logging out
 LOGOUT_REDIRECT_URL = '/login'
 
+# Path to static folder for static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'static'),
 )
