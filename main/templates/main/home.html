@@ -3,6 +3,7 @@
 {% block title %} Homepage {% endblock %}
 
 {% block content %} 
+    <!-- Checks if user authenticated send them hello message -->
     {% if request.user.is_authenticated %}
         <p>Hello {{request.user}} Let's Chat!</p>
     {% endif %}

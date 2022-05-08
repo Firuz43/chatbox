@@ -3,6 +3,7 @@
 {% block title %} Register {% endblock %}
 
 {% block content %} 
+<!-- Styling -->
 <style>
     .login--wrapper {
         display: flex;
@@ -16,7 +17,7 @@
 </style>
 <div class="container">
     <div class="login--wrapper">
-
+        <!-- Registration form -->
         {% if page == 'login' %}
         <form method="post" class="form">
             {% csrf_token %}
