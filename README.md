@@ -14,6 +14,7 @@
 I used MongoDB as backend and it has login and registration functionality. When you wirte a message it will send message to all users. I didn't
 write functionality to save messages to database due to time restriction. I was trying to do it in 3 days, some things i was coding and learning along.
 You can install packages inside requirements.txt and run application. Now the app has functionality of login and registration users and saving them in database and also has functionality for reall time chat with help of django channels and websockets. When users enter the site and write a message message will display to all users you can see demo version by running it in your machine. I will be still working on this app finish some tasks.
+</br>
 Thank you!
 
 </br>
